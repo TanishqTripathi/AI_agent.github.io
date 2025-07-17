@@ -1,7 +1,7 @@
-import requests 
+# import requests 
 import os
 from dotenv import load_dotenv
-import streamlit as st
+# import streamlit as st
 
 load_dotenv()
 
@@ -15,7 +15,7 @@ groq_api_key = os.getenv("GROQ_API_KEY")
 tavily_api_key = os.getenv("TAVILY_API_KEY")
 
 from langchain_groq import ChatGroq
-from langchain_openai import ChatOpenAI
+# from langchain_openai import ChatOpenAI
 # from langchain_community.tools.tavily_search import TavilySearchResults
 # from langchain_tavily import TavilySearchResults
 # from langchain_community.tools.tavily_search import TavilySearch
@@ -27,7 +27,7 @@ groq_ai = ChatGroq(model="llama-3.3-70b-versatile",temperature=0.1, api_key=groq
 search_tool = TavilySearch(max_results=2)
 
 from langgraph.prebuilt import create_react_agent 
-from langchain_core.messages import HumanMessage, AIMessage
+from langchain_core.messages import AIMessage
 
 # system_prompt = "Act as an friendly ai agent"
 
