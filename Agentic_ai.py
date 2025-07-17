@@ -1,15 +1,16 @@
 import requests 
 import os
 from dotenv import load_dotenv
+import streamlit as st
 
 load_dotenv()
 
 # groq_api_key = requests.get("Groq_api")
-groq_api_key = os.getenv("GROQ_API_KEY")
+groq_api_key = st.secrets["GROQ_API_KEY"]
 # chatgpt_api_key = requests.get("Chatgpt_api")
-chatgpt_api_key = os.getenv("CHATGPT_API_KEY")
+# chatgpt_api_key = os.getenv("CHATGPT_API_KEY")
 # taveliy_api_key = requests.get("tavely_api")
-tavily_api_key = os.getenv("TAVILY_API_KEY")
+tavily_api_key = st.secrets["TAVILY_API_KEY"]
 
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
@@ -18,7 +19,7 @@ from langchain_openai import ChatOpenAI
 # from langchain_community.tools.tavily_search import TavilySearch
 from langchain_tavily import TavilySearch
 
-open_ai = ChatOpenAI(model="gpt-4o-mini", temperature=0.1, api_key=chatgpt_api_key)
+# open_ai = ChatOpenAI(model="gpt-4o-mini", temperature=0.1, api_key=chatgpt_api_key)
 groq_ai = ChatGroq(model="llama-3.3-70b-versatile",temperature=0.1, api_key=groq_api_key)
 
 search_tool = TavilySearch(max_results=2)
@@ -34,8 +35,8 @@ def get_response_from_ai(llm_id, query, allow_search, model_provider,system_prom
     """
     if model_provider == "groq":
         llm = ChatGroq(model=llm_id, temperature=0.1, api_key=groq_api_key)
-    elif model_provider == "openai":
-        llm = ChatOpenAI(model=llm_id, temperature=0.1, api_key=chatgpt_api_key)
+    # elif model_provider == "openai":
+    #     llm = ChatOpenAI(model=llm_id, temperature=0.1, api_key=chatgpt_api_key)
     else:
         raise ValueError("Unsupported model provider")
 

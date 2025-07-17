@@ -12,7 +12,7 @@ class RequestState(BaseModel):
 from fastapi import FastAPI
 from Agentic_ai import get_response_from_ai
 
-ALLOWED_MODELS = ["gpt-4o-mini", "llama-3.3-70b-versatile"]
+ALLOWED_MODELS = ["llama-3.3-70b-versatile"]
 
 app = FastAPI(title="Agentic AI API",)
 

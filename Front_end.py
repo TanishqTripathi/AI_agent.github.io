@@ -7,14 +7,14 @@ st.write("This is a simple AI agent that can answer questions and perform tasks.
 system_prompt = st.text_area("System Prompt",height=70,placeholder="Enter system prompt here...")
 
 MODEL_NAME_GROQ = ["llama-3.3-70b-versatile"]
-MODEL_NAME_OPENAI = ["gpt-4o-mini"]
+# MODEL_NAME_OPENAI = ["gpt-4o-mini"]
 
-provider = st.radio("Model Provider", ["groq", "openai"], index=0)
+provider = st.radio("Model Provider", ["groq"], index=0)
 
 if provider == "groq":
     model_name = st.selectbox("Model Name", MODEL_NAME_GROQ, index=0)
-elif provider == "openai":
-    model_name = st.selectbox("Model Name", MODEL_NAME_OPENAI, index=0)
+# elif provider == "openai":
+#     model_name = st.selectbox("Model Name", MODEL_NAME_OPENAI, index=0)
 
 allow_search = st.checkbox("Allow Search")
 
