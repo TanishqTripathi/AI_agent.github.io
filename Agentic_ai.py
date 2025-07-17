@@ -11,7 +11,8 @@ groq_api_key = os.getenv("GROQ_API_KEY")
 # chatgpt_api_key = requests.get("Chatgpt_api")
 # chatgpt_api_key = os.getenv("CHATGPT_API_KEY")
 # taveliy_api_key = requests.get("tavely_api")
-tavily_api_key = st.secrets["TAVILY_API_KEY"]
+# tavily_api_key = st.secrets["TAVILY_API_KEY"]
+tavily_api_key = os.getenv("TAVILY_API_KEY")
 
 from langchain_groq import ChatGroq
 from langchain_openai import ChatOpenAI
