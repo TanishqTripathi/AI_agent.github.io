@@ -6,7 +6,8 @@ import streamlit as st
 load_dotenv()
 
 # groq_api_key = requests.get("Groq_api")
-groq_api_key = st.secrets["GROQ_API_KEY"]
+# groq_api_key = st.secrets["GROQ_API_KEY"]
+groq_api_key = os.getenv("GROQ_API_KEY")
 # chatgpt_api_key = requests.get("Chatgpt_api")
 # chatgpt_api_key = os.getenv("CHATGPT_API_KEY")
 # taveliy_api_key = requests.get("tavely_api")
