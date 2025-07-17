@@ -1,3 +1,9 @@
+# Build tools
+pip>=24.0
+setuptools>=68.0.0
+wheel>=0.40.0
+
+# Core dependencies
 aiohappyeyeballs==2.6.1
 aiohttp==3.12.13
 aiosignal==1.3.2
@@ -40,18 +46,26 @@ jsonpatch==1.33
 jsonpointer==3.0.0
 jsonschema==4.24.0
 jsonschema-specifications==2025.4.1
-langchain==0.3.26
-langchain-community==0.3.26
-langchain-core==0.3.67
-langchain-groq==0.3.5
+
+# LangChain ecosystem (ALIGNED VERSIONS)
+langchain==0.3.30
+langchain-core==0.3.30
+langchain-community==0.3.30
 langchain-openai==0.3.27
+langchain-groq==0.3.5
 langchain-tavily==0.2.5
 langchain-text-splitters==0.3.8
+
+# LangGraph ecosystem
 langgraph==0.5.0
 langgraph-checkpoint==2.1.0
 langgraph-prebuilt==0.5.2
 langgraph-sdk==0.1.72
+
+# LangSmith
 langsmith==0.4.4
+
+# Parsing, utils, etc.
 markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 marshmallow==3.26.1
@@ -72,9 +86,13 @@ Pillow==9.0.1
 propcache==0.3.2
 protobuf==6.31.1
 pyarrow==20.0.0
+
+# Pydantic and settings
 pydantic==2.10.6
 pydantic-settings==2.8.1
 pydantic_core==2.27.2
+
+# Streamlit and visualization
 pydeck==0.9.1
 Pygments==2.19.1
 python-dateutil==2.9.0.post0
@@ -116,4 +134,6 @@ xxhash==3.5.0
 yarl==1.20.1
 zipp==3.21.0
 zstandard==0.23.0
-gunicorn
+
+# Deployment server (with version)
+gunicorn==21.2.0
